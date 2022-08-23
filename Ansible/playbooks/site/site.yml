@@ -1,0 +1,4 @@
+---
+- import_playbook: ../bdd/bdd.yml
+- import_playbook: ../back/back.yml
+- import_playbook: ../front/front.yml

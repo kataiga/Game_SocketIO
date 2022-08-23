@@ -1,0 +1,18 @@
+---
+
+- hosts: back
+  remote_user: ansible
+  roles:
+
+    - role: common
+      tags: [common]
+
+    - role: node
+      tags: [node]
+
+    - role: back-clone
+      tags: [backclone]
+
+    - role: back-deploy
+      tags: [backdeploy]
+      

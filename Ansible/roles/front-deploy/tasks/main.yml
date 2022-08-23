@@ -1,0 +1,27 @@
+---
+
+- name: npm install 
+  become: true
+  ansible.builtin.command:
+    cmd: npm install
+  args:
+    chdir: /home/deploy/front
+
+- name: npm run build 
+  become: true
+  ansible.builtin.command:
+    cmd: npm run build
+  args:
+    chdir: /home/deploy/front
+
+- name: copy nginx config
+  become: true
+  ansible.builtin.copy:
+    src: wafm.xyz
+    dest: /etc/nginx/sites-enabled/
+
+- name: Restart nginx
+  become: true
+  ansible.builtin.service:
+    name: nginx
+    state: restarted

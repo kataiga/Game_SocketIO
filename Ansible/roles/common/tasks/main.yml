@@ -1,0 +1,16 @@
+---
+
+- name: Update apt and install packages
+  become: true
+  apt: 
+    name: [
+      'gnupg', 
+      'gnupg1',
+      'gnupg2',
+      'git',
+      'htop',
+      'tmux'
+    ]
+    update_cache: yes
+    state: latest
+    

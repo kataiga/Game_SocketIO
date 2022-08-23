@@ -1,0 +1,27 @@
+---
+
+- name: clone the dev repository
+  ansible.builtin.git:
+    repo: git@gitlab.com:flobel2222/wam.git
+    dest: /home/ansible/tmp
+    accept_hostkey: true
+    ssh_opts: "-o StrictHostKeyChecking=no"
+    version: "{{ branch }}"
+
+- name: remove last version
+  become: true
+  file:
+    state: absent
+    path: /home/deploy/front
+
+- name: mv front folder to /home/deploy and change owner to deploy
+  become: true
+  shell: |
+    mv ./tmp/front /home/deploy/
+    chown -R deploy:deploy /home/deploy/front
+
+- name: clean tmp folder
+  file:
+    state: absent
+    path: /home/ansible/tmp/
+

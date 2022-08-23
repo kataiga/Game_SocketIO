@@ -1,0 +1,5 @@
+---
+
+- name: Leaving a mark
+  command: "touch ~/{{domain_name}}"
+  

@@ -1,0 +1,20 @@
+---
+
+- hosts: front
+  remote_user: ansible
+  roles:
+
+    - role: common
+      tags: [common]
+
+    - role: nginx
+      tags: [nginx]
+
+    - role: node
+      tags: [node]
+
+    - role: front-clone
+      tags: [frontclone]
+
+    - role: front-deploy
+      tags: [frontdeploy]

@@ -1,0 +1,19 @@
+---
+
+- hosts: bdd
+  remote_user: ansible
+  
+  roles:
+
+    - role: common
+      tags: [common]
+
+    - role: psql
+      tags: [psql]
+
+    - role: apache
+      tags: [apache]
+
+    - role: pgadmin
+      tags: [pgadmin]
+      

@@ -1,0 +1,14 @@
+---
+
+- name: install apache at the latest version
+  become: true
+  apt: 
+    name: apache2
+    update_cache: yes
+    state: latest
+  
+- name: start apache
+  become: true
+  service:
+      name: apache2
+      state: started

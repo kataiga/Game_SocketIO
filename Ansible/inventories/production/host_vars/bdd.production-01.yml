@@ -1,0 +1,5 @@
+db_user: psqladmin
+db_password: (}s{tKHir{Y5z}w75jb
+db_prod: wam_prod
+db_dev: wam_dev
+db_test: wam_test

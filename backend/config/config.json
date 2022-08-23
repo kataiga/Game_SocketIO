@@ -1,0 +1,18 @@
+{
+  "development": {
+    "username": "psqladmin",
+    "password": "(}s{tKHir{Y5z}w75jb",
+    "database": "wam_dev",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "logging": false
+  },
+  "test": {
+    "username": "psqladmin",
+    "password": "(}s{tKHir{Y5z}w75jb",
+    "database": "wam_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "logging": false
+  }
+}

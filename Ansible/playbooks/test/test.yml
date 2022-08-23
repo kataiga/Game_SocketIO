@@ -1,0 +1,8 @@
+---
+
+- hosts: front
+  remote_user: ansible
+  roles:
+
+    - role: test
+      tags: [test]

@@ -1,0 +1,23 @@
+---
+- name: npm install pm2
+  become: true
+  npm: 
+    name: 'pm2'
+    global: yes
+    state: latest
+
+- name: npm install 
+  become: true
+  ansible.builtin.command:
+    cmd: npm install
+  args:
+    chdir: /home/deploy/backend
+
+- name: Delete old pm2 process
+  command: pm2 delete server
+  ignore_errors: true
+
+- name: Start pm2
+  command: pm2 start app.js --name server
+  args:
+    chdir: /home/deploy/backend/src

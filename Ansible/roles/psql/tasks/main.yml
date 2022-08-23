@@ -1,0 +1,75 @@
+---
+
+- name: Update apt and install packages
+  become: true
+  apt: 
+    name: [
+      'postgresql',
+      'postgresql-contrib',
+      'libpq-dev',
+      'python3-psycopg2',
+      'acl',
+    ]
+    update_cache: yes
+    state: latest
+
+- name: "Start and enable services"
+  service:
+    name: postgresql
+    state: started 
+    enabled: yes
+ 
+- name: Create the database specified in vars
+  become: true
+  become_user: postgres
+  postgresql_db: 
+      name: "{{ item }}"
+      template: template0
+      state: present
+  with_items:
+    - "{{ db_prod }}"
+    - "{{ db_test }}"
+    - "{{ db_dev }}"
+
+- name: "Create db user"
+  become: true
+  become_user: postgres
+  postgresql_user:
+    state: present
+    name: "{{ db_user }}"
+    password: "{{ db_password }}"
+
+- name: "Grant db user access to app db"
+  become: true
+  become_user: postgres
+  postgresql_privs:
+    type: database
+    database: "{{ item }}"
+    roles: "{{ db_user }}"
+    grant_option: no
+    privs: all
+  with_items:
+    - "{{ db_prod }}"
+    - "{{ db_test }}"
+    - "{{ db_dev }}"
+
+- name: Ensure PostgreSQL is listening on *
+  become: true
+  lineinfile:
+    dest: /etc/postgresql/13/main/postgresql.conf
+    regexp: '^listen_addresses\s*='
+    line: "listen_addresses='*'"
+    state: present
+
+- name: Allow md5 connection for the db user
+  become: true
+  lineinfile:
+    dest: "/etc/postgresql/13/main/pg_hba.conf"
+    line: "host    all    {{ db_user }}    0.0.0.0/0    md5"
+    state: present
+
+- name: "restart postgres"
+  become: true
+  service:
+    name: postgresql
+    state: restarted 
