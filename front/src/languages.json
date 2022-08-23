@@ -1,0 +1,40 @@
+{
+    "en": {
+        "Register": "Register",
+        "Login": "Login",
+        "Logout": "Log out",
+        "HomeSentence1": "An experience in 3D on navigator !",
+        "HomeSentence2": "Have fun between friends and others people !",
+        "HomeSentence3": "Free to talk on any subject !",
+        "Developper": "Developper",
+        "Username": "Username",
+        "UsernameAuth": "Username (15 characters maximun)",
+        "Password": "Password",
+        "PasswordAuth": "Password (8 characters minimum)",
+        "ConfirmationPassword": "Confirm password",
+        "Confirm": "Confirm",
+        "AlreadyRegistered": "Already registered",
+        "Dashboard": "Dashboard",
+        "Profile": "Profile",
+        "Save": "Save"
+    },
+    "fr": {
+        "Register": "S'enregistrer",
+        "Login": "Se connecter",
+        "Logout": "Sortir",
+        "HomeSentence1": "Une expérience en 3D sur navigateur !",
+        "HomeSentence2": "Amusez-vous entre amis ou rencontrez d'autres personnes !",
+        "HomeSentence3": "Discutez de ce que voulez !",
+        "Developper": "Développeur",
+        "Username": "Pseudo",
+        "UsernameAuth": "Pseudo (15 caractères maximun)",
+        "Password": "Mot de passe",
+        "PasswordAuth": "Mot de passe (8 caractères minimum)",
+        "ConfirmationPassword": "Confirmation mot de passe",
+        "Confirm": "Confirmer",
+        "AlreadyRegistered": "Déjà enregistré",
+        "Dashboard": "Tableau de bord",
+        "Profile": "Profil",
+        "Save": "Sauvegarder"
+    }
+}

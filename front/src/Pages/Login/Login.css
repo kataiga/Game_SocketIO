@@ -1,0 +1,18 @@
+.wrapper-login {
+    display: grid;
+    grid-template-columns: 35% 30% 35%;
+    justify-items: center;
+    padding-top: 200px;
+}
+
+.bloc-login {
+    text-align: center;
+    width: 100%;
+}
+
+.href-button {
+    border: none;
+    color: orange;
+    font-weight: bold;
+    background-color: #2f2f2f;
+}

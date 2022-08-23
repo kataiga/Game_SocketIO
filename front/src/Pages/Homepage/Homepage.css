@@ -1,0 +1,147 @@
+/*Régler le problème de margin en trop*/
+
+#homepage-b1 {
+    background-color: #2f2f2f;
+    margin-top: 0;
+    text-align: center;
+    height: 70vh;
+}
+
+.homepage-bloc-1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../../../public/Homepage-image-bg.png");
+    background-size: cover;
+    height: 450px;
+}
+
+.homepage-navbar {
+    display: grid;
+    grid-template-columns: 40% 20% 40%;
+}
+
+.container-navbar {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    align-items: center;
+    font-weight: bold;
+}
+
+.lr {
+    width: 120%;
+    height: 40px;
+    background-color: #2f2f2f;
+    color: white;
+    border: none;
+    font-weight: bold;
+}
+
+.lr:hover {
+    background-color: #464646;
+}
+
+#lr-login {
+    margin-left: -5px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#lr-register {
+    margin-left: -10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.ls {
+    width: 100%;
+    height: 60px;
+    border-radius: 40px;
+    z-index: 1;
+    background-color: #eb8042;
+    border: none;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+}
+
+.ls:hover {
+    background-color: #f1ae09;
+}
+
+.img-wam {
+    text-align: left;
+    margin-left: 25px;
+}
+
+.Background-Homepage {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: black;
+}
+
+#title-homepage {
+    margin: 0;
+    text-align: center;
+    font-size: 110px;
+    font-weight: bold;
+    margin-bottom: 60px;
+    margin-top: 120px;
+}
+
+#register-home {
+    left: 0%;
+    height: 40px;
+    width: 200px;
+    border-radius: 10px;
+    background-color: #fed296;
+    border-style: none;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.right {
+    text-align: center;
+    margin-right: 15%;
+}
+
+.container-description-bloc-1 {
+    display: grid;
+    grid-template-columns: 35% 30% 35%;
+}
+
+#homepage-b2 {
+    text-align: center;
+    height: 45vh;
+    font-weight: bold;
+}
+
+.description-1 {
+    margin-top: 0;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    background-image: linear-gradient(to right, #2f2f2f, transparent);
+    height: 50vh;
+}
+
+.description-2 {
+    margin-top: 0;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    background-image: linear-gradient(to left, #2f2f2f, transparent);
+    height: 50vh;
+}
+
+#description-text {
+    margin-top: 190px;
+}
+
+.wrapper-profil {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    margin-top: 70px;
+    color: white;
+}
+
+.logo-epitech {
+    margin-top: 60px;
+}

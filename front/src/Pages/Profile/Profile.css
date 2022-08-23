@@ -1,0 +1,58 @@
+.wrapper-profile {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    justify-items: center;
+    align-items: center;
+    margin-top: 150px;
+    width: 100%;
+}
+
+.bloc-profile {
+    text-align: center;
+    width: 100%;
+}
+
+.wrapper-in-profile {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    margin-top: 50px;
+    width: 100%;
+    column-gap: 50px;
+}
+
+.input-profile {
+    width: 80%;
+    height: 40px;
+    margin-top: 25px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 5px;
+}
+
+.input-save-profile {
+    margin-top: 50px;
+    height: 40px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #fed296;
+    border-style: none;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.back {
+    position: absolute;
+    top: 60px;
+    right: 75px;
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: #2f2f2f;
+    color: white;
+    font-weight: bold;
+    border-style: none;
+}
+
+.back:hover {
+    background-color: #464646
+}
